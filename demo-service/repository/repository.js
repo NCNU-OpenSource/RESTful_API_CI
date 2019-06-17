@@ -21,12 +21,13 @@ class Repository {
           return reject(new Error("An error occured getting the users: " + err));
         }
  
-        resolve((results || []).map((user) => {
+        resolve((results || []).map((user, id) => {
+          // console.log(user)
           return {
-            UID: results[0].UID,
-            Name: results[0].Name,
-            Tel: results[0].Tel,
-            CreateDT: results[0].CreateDT
+            UID: results[id].UID,
+            Name: results[id].Name,
+            Tel: results[id].Tel,
+            CreateDT: results[id].CreateDT
           };
         }));
       });

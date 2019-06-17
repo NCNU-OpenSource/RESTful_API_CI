@@ -9,7 +9,8 @@ module.exports = (app, options) => {
 
   app.get('/users', (req, res, next) => {
     options.repository.getUsers().then((users) => {
-      res.status(200).send(users.map((user) => { return {
+      res.status(200).send(users.map((user) => { 
+        return {
         UID: user.UID,
         Name: user.Name,
         Tel: user.Tel,
