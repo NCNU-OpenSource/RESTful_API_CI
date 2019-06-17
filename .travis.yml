@@ -8,6 +8,7 @@ before_install:
   - sudo docker-compose up -d
 script:
   - cd demo-service/
+  - npm i -g npm
   - npm install
   - npm test
 after_script:
