@@ -1,19 +1,25 @@
-services:
-  - docker
-env:
-  DOCKER_COMPOSE_VERSION: 1.7.1
- 
-before_install:
-  - sudo apt-get -y update
-  - sudo apt-get -y purge docker-engine
-  - sudo apt-get -y install docker-engine
-  - sudo rm /usr/local/bin/docker-compose
-  - curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > docker-compose
-  - chmod +x docker-compose
-  - sudo mv docker-compose /usr/local/bin
+sudo: required
+dist: trusty
 
 install:
-  - docker-compose -f docker-compose.yml build
+  # Update docker-engine using Ubuntu 'trusty' apt repo
+  - >
+    curl -sSL "https://get.docker.com/gpg" |
+     sudo -E apt-key add -
+  - >
+    echo "deb https://apt.dockerproject.org/repo ubuntu-trusty main" |
+     sudo tee -a /etc/apt/sources.list
+  - sudo apt-get update
+  - >
+    sudo apt-get -o Dpkg::Options::="--force-confdef" \
+     -o Dpkg::Options::="--force-confold" --assume-yes install docker-engine
+  - docker version
+  # Update docker-compose via pip
+  - sudo pip install docker-compose
+  - docker-compose version
 
-script:
-  - docker-compose -f docker-compose.yml up
+before_script:
+  - docker-compose up --build -d
+
+after_script:
+  - docker-compose down
