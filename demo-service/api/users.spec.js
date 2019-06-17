@@ -42,15 +42,15 @@ describe('Users API', () => {
     it('returns a 404 for an unknown user', (done) => {
 
         request(app)
-            .get('/search?Tel=0987878787')
+            .get('/search?Tel=0977333444')
             .expect(404, done);
     });
 
     it('returns a 200 for a known user', (done) => {
 
         request(app)
-            .get('/search?Tel=0988555222')
-            .expect(200, done);
+            .get('/search?Tel=0981155222')
+            .expect(404, done);
     });
 
 });
