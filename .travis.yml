@@ -9,6 +9,7 @@ before_install:
 script:
   - cd demo-service/
   - npm install mocha chai supertest should eslint express morgan mysql
-  - npm test
+  - npm run test
+  - npm run cov
 after_script:
   - docker-compose down
