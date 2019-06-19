@@ -1,32 +1,35 @@
 {
-    "name": "demo",
-    "version": "0.0.0",
-    "private": true,
-    "main": "index.js",
-    "scripts": {
-      "start": "node index.js",
-      "test": "mocha -R spec **/*.spec.js",
-      "debug": "node-debug index.js",
-      "lint": "eslint ."
+  "name": "demo",
+  "version": "0.0.0",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "mocha -R spec **/*.spec.js",
+    "debug": "node-debug index.js",
+    "lint": "eslint .",
+    "cov": "export NODE_ENV=test PORT=3300 && nyc mocha -R spec **/*.spec.js --exit"
+  },
+  "dependencies": {
+    "express": "^4.13.4",
+    "morgan": "^1.7.0",
+    "mysql": "^2.10.2"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^2.7.0",
+    "mocha": "^2.5.3",
+    "nyc": "^14.1.1",
+    "should": "^8.3.0",
+    "supertest": "^1.2.0"
+  },
+  "eslintConfig": {
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module"
     },
-    "dependencies": {
-      "express": "^4.13.4",
-      "morgan": "^1.7.0",
-      "mysql": "^2.10.2"
-    },
-    "devDependencies": {
-      "eslint": "^2.7.0",
-      "mocha": "^2.4.5",
-      "should": "^8.3.0",
-      "supertest": "^1.2.0"
-    },
-    "eslintConfig": {
-      "parserOptions": {
-        "ecmaVersion": 6,
-        "sourceType": "module"
-      },
-      "rules": {
-        "semi": 2
-      }
+    "rules": {
+      "semi": 2
     }
   }
+}
