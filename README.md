@@ -15,13 +15,13 @@
   - 直接查詢出會員列表
     - GET /users
   - 以電話搜尋會員
-    - GET /users/{Tel}
+    - GET /users/:Tel
   - 新增會員
-    - POST /users/{Tel}
+    - POST /users/:Name/:Tel
   - 更新會員資料
-    - PUT /users/{Tel}
+    - PUT /users/:Name/:Tel
   - 刪除會員
-    - DELETE /users
+    - DELETE /users/:Name
 - 單元測試 & 程式覆蓋率
   - nyc mocha
 - 整合自動化測試部屬
@@ -105,7 +105,13 @@ addUser / updateuser / deleteuser
     - POST
     - PUT
     - DELETE
-
+- config/config.js
+  - DB Connection
+- server/server.js
+  - 建立伺服器
+- index.js 
+  - Server ON !!
+  
 ### Dockerfile
 ##### Database - MySQL
 ![](https://i.imgur.com/rdJqdY4.png)
@@ -129,8 +135,13 @@ addUser / updateuser / deleteuser
 
 ## Travis CI
 #### 連結Github帳戶，自動同步專案
+
+- 寫yml檔案
+![](https://i.imgur.com/my0xnpH.png)
+
 - 找到要CI的專案，把勾勾ON起來
 ![](https://i.imgur.com/oHfpVdt.png)
+
 - 自動建立環境測試
 ![](https://i.imgur.com/Xm7pIyi.png)
 
