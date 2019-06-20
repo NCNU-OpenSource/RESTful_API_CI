@@ -21,10 +21,11 @@ module.exports = (app, options) => {
     .catch(next);
   });
 
-  app.get('/search', (req, res, next) => {
+  app.get('/users/:tel', (req, res, next) => {
 
     //  Get the Tel.
-    var Tel = req.query.Tel;
+    // var Tel = req.query.Tel;
+    const Tel = (req.params.tel);
     if (!Tel) {
       throw new Error("When searching for a user, the Tel must be specified, e.g: '/search?Tel=0977333444'.");
     }
@@ -43,5 +44,69 @@ module.exports = (app, options) => {
     })
     .catch(next);
 
+  });
+
+  app.post('/users/:name/:tel', (req, res, next) => {
+    //  Get the Tel.
+    const userName = (req.params.name);
+    const Tel = (req.params.tel);
+    if (!Tel) {
+      throw new Error("When searching for a user, the Tel must be specified, e.g: '/search?Tel=0977333444'.");
+    }
+    //  Get the user from the repo.
+    options.repository.addUser(userName, Tel).then((user) => {
+
+      if (!user) {
+        res.status(404).send('User not found.');
+      } else {
+        res.status(200).send(
+          {
+          Message: user.Message
+        });
+      }
+    })
+      .catch(next);
+  });
+  app.put('/users/:name/:tel', (req, res, next) => {
+    //  Get the Tel.
+    const userName = (req.params.name);
+    const Tel = (req.params.tel);
+    if (!Tel) {
+      throw new Error("When searching for a user, the Tel must be specified, e.g: '/search?Tel=0977333444'.");
+    }
+    //  Get the user from the repo.
+    options.repository.updateUser(userName, Tel).then((user) => {
+
+      if (!user) {
+        res.status(404).send('User not found.');
+      } else {
+        res.status(200).send(
+          {
+          Message: user.Message
+        });
+      }
+    })
+      .catch(next);
+  });
+  app.delete('/users/:name', (req, res, next) => {
+    //  Get the Tel.
+    const userName = (req.params.name);
+
+    if (!userName) {
+      throw new Error("When searching for a user, the Tel must be specified, e.g: '/search?Tel=0977333444'.");
+    }
+    //  Get the user from the repo.
+    options.repository.deleteUser(userName).then((user) => {
+
+      if (!user) {
+        res.status(404).send('User not found.');
+      } else {
+        res.status(200).send(
+          {
+          Message: user.Message
+        });
+      }
+    })
+      .catch(next);
   });
 };
