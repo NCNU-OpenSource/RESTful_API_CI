@@ -75,6 +75,13 @@
 - sudo apt install docker-compose
 ```
 ### Database
+```
+.
++-- demo-database
+|   +-- Dockerfile
+|   +-- setup.sql
+```
+
 #### Create Table
 -  MySQL vs. MS SQL
 ```
@@ -92,6 +99,16 @@ addUser / updateuser / deleteuser
 ![](https://i.imgur.com/iIKU8Ta.png)
 
 ### API
+```
+.
++-- demo-database
++-- demo-service
+|   +-- api
+|   +-- config
+|   +-- repository
+|   +-- server
++-- index.js
+```
 - repository/repository.js
   - Nodejs 對資料庫的連線與 CRUD
     - getUsers
