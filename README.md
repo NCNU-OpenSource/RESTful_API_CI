@@ -11,24 +11,27 @@
 - docker-compose down (關閉)
 
 ## 功能
-#### API直接查詢出會員列表
-- 直接查詢出會員列表
-  - GET /users
-- 以電話搜尋會員
-  - GET /users/{Tel}
-- 新增會員
-  - POST /users/{Tel}
-- 更新會員資料
-  - PUT /users/{Tel}
-- 刪除會員
-  - DELETE /users
-- 單元測試 
-- Travis CI 整合測試部屬
+- API
+  - 直接查詢出會員列表
+    - GET /users
+  - 以電話搜尋會員
+    - GET /users/{Tel}
+  - 新增會員
+    - POST /users/{Tel}
+  - 更新會員資料
+    - PUT /users/{Tel}
+  - 刪除會員
+    - DELETE /users
+- 單元測試 & 程式覆蓋率
+  - nyc mocha
+- 整合自動化測試部屬
+  - Travis CI 
 
 ## 開發環境
 - Ubuntu 18.04
 - Docker version 18.09.6
 - Docker-compose version 1.17.1
+
 ## 使用工具
 - Chrome
 - Postman
