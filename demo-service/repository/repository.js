@@ -98,7 +98,6 @@ class Repository {
   }
 }
 
-//  One and only exported function, returns a connected repo.
 module.exports.connect = (connectionSettings) => {
   return new Promise((resolve, reject) => {
     if (!connectionSettings.host) throw new Error("A host must be specified.");
