@@ -22,14 +22,16 @@
 - Ubuntu 18.04
 - Docker version 18.09.6
 - Docker-compose version 1.17.1
+## 使用工具
 - Chrome
 - Postman
 - Visual Studio Code 文字編輯器
 
 ## 安裝環境
 ### Visual Studio Code
+[點我下載](https://code.visualstudio.com/docs/?dv=linux64_deb)
 ```
-- 官網下載 Visual Studio Code 安裝檔(.deb)  [點我下載](https://code.visualstudio.com/docs/?dv=linux64_deb)
+- 官網下載 Visual Studio Code 安裝檔(.deb)  
 - cd <VS Code 安裝檔所在目錄>
 - sudo dpkg -i <VS Code 安裝檔>.deb
 - code (開啟程式)
