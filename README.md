@@ -31,6 +31,8 @@
 - Ubuntu 18.04
 - Docker version 18.09.6
 - Docker-compose version 1.17.1
+- Nodejs v10
+- MySQL 5
 
 ## 使用工具
 - Chrome
