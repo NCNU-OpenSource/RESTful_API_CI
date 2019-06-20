@@ -68,6 +68,23 @@
 - sudo apt install docker-ce
 - sudo apt install docker-compose
 ```
+### Database
+#### Create Table
+-  MySQL vs. MS SQL
+```
+MySQL
+```
+![](https://i.imgur.com/RuTWu2Q.png)
+```
+MS SQL
+```
+![](https://i.imgur.com/o39ygIq.png)
+#### Stroed Procedure
+```
+addUser
+```
+![](https://i.imgur.com/iIKU8Ta.png)
+
 ## Postman 測試 CRUD
 #### GET http://localhost:8123/users 
 ![](https://i.imgur.com/lLfOqP5.png)
@@ -86,15 +103,16 @@
 ![](https://i.imgur.com/Xm7pIyi.png)
 
 ## Unit Test
-- npm run test
+```
+npm run test
+```
 ![](https://i.imgur.com/ovClR2V.png)
+```
 - npm run cov
+```
 ![](https://i.imgur.com/U1y6jLw.png)
 
-
 ## 未來改進
-
-
-
-
+- 程式覆蓋率優化
+- Express Framwork
 
