@@ -136,13 +136,19 @@ addUser / updateuser / deleteuser
 ## Travis CI
 #### 連結Github帳戶，自動同步專案
 
-```寫yml檔案```
+```
+寫yml檔案
+```
 ![](https://i.imgur.com/my0xnpH.png)
 
-```找到要CI的專案，把勾勾ON起來```
+```
+找到要CI的專案，把勾勾ON起來
+```
 ![](https://i.imgur.com/oHfpVdt.png)
 
-```自動建立環境測試```
+```
+自動建立環境測試
+```
 ![](https://i.imgur.com/Xm7pIyi.png)
 
 ## Unit Test
