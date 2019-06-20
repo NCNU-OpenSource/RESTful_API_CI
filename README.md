@@ -23,6 +23,7 @@
 - Docker version 18.09.6
 - Docker-compose version 1.17.1
 - Chrome
+- Postman
 - Visual Studio Code 文字編輯器
 
 ## 安裝環境
@@ -34,6 +35,11 @@
 - code (開啟程式)
 ```
 ![](https://i.imgur.com/XXu8BAk.png)
+### Postman
+```
+- sudo snap install postman
+```
+![](https://i.imgur.com/SsVC92q.png)
 ### Chrome
 ```
 - sudo apt install gdebi-core
