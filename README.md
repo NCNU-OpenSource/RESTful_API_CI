@@ -11,27 +11,19 @@
 - docker-compose down (關閉)
 
 ## 功能
-- API
-  - 直接查詢出會員列表
-    - GET /users
-  - 以電話搜尋會員
-    - GET /users/{Tel}
-  - 新增會員
-    - POST /users/{Tel}
-  - 更新會員資料
-    - PUT /users/{Tel}
-  - 刪除會員
-    - DELETE /users
-- Docker-compose
-  - Docker
-    - MySQL
-    - Nodejs
-- 單元測試
-  - mocha
-- 程式覆蓋率
-  - nyc mocha
-- 整合自動測試部屬
-  - Travis CI
+#### API直接查詢出會員列表
+- 直接查詢出會員列表
+  - GET /users
+- 以電話搜尋會員
+  - GET /users/{Tel}
+- 新增會員
+  - POST /users/{Tel}
+- 更新會員資料
+  - PUT /users/{Tel}
+- 刪除會員
+  - DELETE /users
+- 單元測試 
+- Travis CI 整合測試部屬
 
 ## 開發環境
 - Ubuntu 18.04
@@ -42,7 +34,7 @@
 - Postman
 - Visual Studio Code 文字編輯器
 
-## 安裝工具與環境
+## 安裝環境
 ### Visual Studio Code
 [點我下載](https://code.visualstudio.com/docs/?dv=linux64_deb)
 ```
@@ -65,7 +57,8 @@
 - google-chrome
 ```
 ![](https://i.imgur.com/RG1mkox.png)
-### Docker install
+### Docker 
+##### install
 ```
 - sudo apt update
 - sudo apt install apt-transport-https ca-certificates curl software-properties-common
@@ -76,7 +69,18 @@
 - sudo apt install docker-ce
 - sudo apt install docker-compose
 ```
-## Database - MySQL
+### Dockerfile
+
+##### Database - MySQL
+![](https://i.imgur.com/rdJqdY4.png)
+
+##### API - Nodejs
+![](https://i.imgur.com/bO6ecns.png)
+
+##### docker-compose
+![](https://i.imgur.com/uIifHVj.png)
+
+### Database
 #### Create Table
 -  MySQL vs. MS SQL
 ```
