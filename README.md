@@ -11,9 +11,10 @@
 - docker-compose down (關閉)
 
 ## 功能
-- 透過網址API直接查詢出會員列表
+#### API直接查詢出會員列表
+- 直接查詢出會員列表
   - /users
-- 透過網址API以電話搜尋會員
+- 以電話搜尋會員
   - /users/{Tel}
 - 單元測試 
 - Travis CI 整合測試部屬
@@ -61,5 +62,15 @@
 - sudo apt install docker-ce
 - sudo apt install docker-compose
 ```
+## Postman 測試 CRUD
+#### GET http://localhost:8123/users 
+![](https://i.imgur.com/lLfOqP5.png)
+#### POST http://localhost:8123/users/DDD/0977398769 
+![](https://i.imgur.com/OepnBPn.png)
+#### PUT http://localhost:8123/users/DDD/0000000000 
+![](https://i.imgur.com/4s9UltY.png)
+#### DELETE http://localhost:8123/users/DDD
+![](https://i.imgur.com/vMHKCxr.png)
+
 ## 注意事項
 
