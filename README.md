@@ -4,7 +4,10 @@
 - https://docs.google.com/presentation/d/1NDp43Zd3CcCHG3ItLzVEGKLhw_2PESOhbPfhrAJ4M0Y/edit?usp=sharing
 
 ## 功能
-- 123
+- 透過網址API直接查詢出會員列表
+- 透過網址API以電話搜尋會員
+- 單元測試 
+- Travis CI 整合測試部屬
 
 ## 開發環境
 - Ubuntu 18.04
