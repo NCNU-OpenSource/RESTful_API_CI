@@ -1,5 +1,8 @@
 # RESTful_API_CI [![Build Status](https://travis-ci.org/NCNU-OpenSource/RESTful_API_CI.svg?branch=master)](https://travis-ci.org/NCNU-OpenSource/RESTful_API_CI)
 
+## Member
+- 資工碩二 106321505 梁裕勛
+
 ## 使用步驟
 - git clone
 - cd RESTful_API_CI
@@ -54,7 +57,7 @@
 - google-chrome
 ```
 ![](https://i.imgur.com/RG1mkox.png)
-### Docker
+### Docker install
 ```
 - sudo apt update
 - sudo apt install apt-transport-https ca-certificates curl software-properties-common
@@ -82,7 +85,15 @@
 - 自動建立環境測試
 ![](https://i.imgur.com/Xm7pIyi.png)
 
-## 注意事項
+## Unit Test
+- npm run test
+![](https://i.imgur.com/ovClR2V.png)
+- npm run cov
+![](https://i.imgur.com/U1y6jLw.png)
+
+
+## 未來改進
+
 
 
 
