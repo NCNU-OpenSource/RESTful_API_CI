@@ -1,8 +1,5 @@
 # RESTful_API_CI [![Build Status](https://travis-ci.org/NCNU-OpenSource/RESTful_API_CI.svg?branch=master)](https://travis-ci.org/NCNU-OpenSource/RESTful_API_CI)
 
-## 簡報連結
-- https://docs.google.com/presentation/d/1NDp43Zd3CcCHG3ItLzVEGKLhw_2PESOhbPfhrAJ4M0Y/edit?usp=sharing
-
 ## 使用步驟
 - git clone
 - cd RESTful_API_CI
@@ -13,9 +10,15 @@
 ## 功能
 #### API直接查詢出會員列表
 - 直接查詢出會員列表
-  - /users
+  - GET /users
 - 以電話搜尋會員
-  - /users/{Tel}
+  - GET /users/{Tel}
+- 新增會員
+  - POST /users/{Tel}
+- 更新會員資料
+  - PUT /users/{Tel}
+- 刪除會員
+  - DELETE /users
 - 單元測試 
 - Travis CI 整合測試部屬
 
@@ -72,5 +75,15 @@
 #### DELETE http://localhost:8123/users/DDD
 ![](https://i.imgur.com/vMHKCxr.png)
 
+## Travis CI
+#### 連結Github帳戶，自動同步專案
+- 找到要CI的專案，把勾勾ON起來
+![](https://i.imgur.com/oHfpVdt.png)
+- 自動建立環境測試
+![](https://i.imgur.com/Xm7pIyi.png)
+
 ## 注意事項
+
+
+
 
