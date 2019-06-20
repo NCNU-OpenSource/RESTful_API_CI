@@ -69,17 +69,6 @@
 - sudo apt install docker-ce
 - sudo apt install docker-compose
 ```
-### Dockerfile
-
-##### Database - MySQL
-![](https://i.imgur.com/rdJqdY4.png)
-
-##### API - Nodejs
-![](https://i.imgur.com/bO6ecns.png)
-
-##### docker-compose
-![](https://i.imgur.com/uIifHVj.png)
-
 ### Database
 #### Create Table
 -  MySQL vs. MS SQL
@@ -93,9 +82,35 @@ MS SQL
 ![](https://i.imgur.com/o39ygIq.png)
 #### Stroed Procedure
 ```
-addUser
+addUser / updateuser / deleteuser
 ```
 ![](https://i.imgur.com/iIKU8Ta.png)
+
+### API
+- repository/repository.js
+  - Nodejs 對資料庫的連線與 CRUD
+    - getUsers
+    - getUserByTel
+    - addUser
+    - updateUser
+    - deleteUser
+- api/user.js
+  - 設計不同 Metohd做 CRUD
+    - GET
+    - POST
+    - PUT
+    - DELETE
+
+### Dockerfile
+##### Database - MySQL
+![](https://i.imgur.com/rdJqdY4.png)
+
+##### API - Nodejs
+![](https://i.imgur.com/bO6ecns.png)
+
+##### docker-compose
+![](https://i.imgur.com/uIifHVj.png)
+
 
 ## Postman 測試 CRUD
 #### GET http://localhost:8123/users 
